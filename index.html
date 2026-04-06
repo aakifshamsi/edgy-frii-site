@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shorten your links. Keep your dignity? Nah. Free URL shortener with meme vibes. No BS, just links.">
+    <meta name="theme-color" content="#0f0f0f">
+    <title>Frii - Shorten Your Links. Keep Your Dignity? Nah. 🔥</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔗</text></svg>">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="bg-grid"></div>
+        <div class="glow-orb glow-1"></div>
+        <div class="glow-orb glow-2"></div>
+        <div class="glow-orb glow-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">FRII</span>
+            </a>
+            <div class="nav-links">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="https://m-space.in" target="_blank" class="nav-link nav-link-subtle">Professional Version →</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-icon">🔥</span>
+                <span>100% Free Forever</span>
+            </div>
+            <h1 class="hero-title">
+                Shorten Your Links.<br>
+                <span class="gradient-text">Keep Your Dignity?</span><br>
+                <span class="strikethrough">Nah.</span> <span class="emoji-bounce">💀</span>
+            </h1>
+            <p class="hero-subtitle">
+                The URL shortener that doesn't judge your meme collection. 
+                Free, fast, and gives zero f*cks about your long-ass URLs.
+            </p>
+            
+            <!-- Link Shortener Form -->
+            <div class="shortener-container">
+                <form id="shortener-form" class="shortener-form">
+                    <div class="input-wrapper">
+                        <span class="input-icon">🔗</span>
+                        <input 
+                            type="url" 
+                            id="url-input" 
+                            placeholder="Paste your long-ass URL here..." 
+                            required
+                            autocomplete="off"
+                        >
+                    </div>
+                    <div class="slug-wrapper">
+                        <span class="slug-prefix">frii.site/</span>
+                        <input 
+                            type="text" 
+                            id="slug-input" 
+                            placeholder="meme-name" 
+                            maxlength="50"
+                            pattern="[a-zA-Z0-9-_]+"
+                            autocomplete="off"
+                        >
+                    </div>
+                    <button type="submit" class="shorten-btn" id="shorten-btn">
+                        <span class="btn-text">Shorten It!</span>
+                        <span class="btn-loader"></span>
+                        <span class="btn-icon">⚡</span>
+                    </button>
+                </form>
+                
+                <!-- Result Display -->
+                <div class="result-container" id="result-container">
+                    <div class="result-success" id="result-success">
+                        <span class="result-icon">✅</span>
+                        <div class="result-content">
+                            <span class="result-label">Your fire link:</span>
+                            <a href="#" id="short-url" class="short-url" target="_blank"></a>
+                        </div>
+                        <button class="copy-btn" id="copy-btn" aria-label="Copy to clipboard">
+                            <span class="copy-icon">📋</span>
+                            <span class="copied-icon">✅</span>
+                        </button>
+                    </div>
+                    <div class="result-error" id="result-error">
+                        <span class="error-icon">💀</span>
+                        <span class="error-message" id="error-message"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" id="links-count">2,847,293</span>
+                    <span class="stat-label">Links Shortened</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">99.9%</span>
+                    <span class="stat-label">Uptime (probably)</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">0$</span>
+                    <span class="stat-label">Cost</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-visual">
+            <div class="floating-links">
+                <div class="float-link fl-1">frii.site/wow</div>
+                <div class="float-link fl-2">frii.site/lol</div>
+                <div class="float-link fl-3">frii.site/meme</div>
+                <div class="float-link fl-4">frii.site/omg</div>
+                <div class="float-link fl-5">frii.site/gg</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ad Banner -->
+    <div class="ad-banner">
+        <div class="ad-container">
+            <span class="ad-label">📢 AD:</span>
+            <span class="ad-text">This is where the man pays the bills so YOU don't have to!</span>
+            <button class="ad-close" aria-label="Close ad">×</button>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="section-header">
+            <span class="section-badge">✨ FEATURES</span>
+            <h2 class="section-title">Why Use Frii?</h2>
+            <p class="section-subtitle">We're basically giving away free money. Wait, no. Free links. That's it.</p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">💸</div>
+                <h3 class="feature-title">Free AF</h3>
+                <p class="feature-desc">
+                    Zero dollars. Zero cents. Zero regrets. 
+                    We literally pay for your links so you can be cheap.
+                </p>
+                <span class="feature-tag">#NoCreditCardNeeded</span>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3 class="feature-title">Meme URLs</h3>
+                <p class="feature-desc">
+                    Custom slugs like "that-one-cat-video" or "not-the-onion". 
+                    Your links deserve personality.
+                </p>
+                <span class="feature-tag">#OwnYourURL</span>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3 class="feature-title">Statz</h3>
+                <p class="feature-desc">
+                    Track your link clicks with analytics. 
+                    Find out which meme went viral. You're welcome.
+                </p>
+                <span class="feature-tag">#KnowYourAudience</span>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🚫</div>
+                <h3 class="feature-title">No BS</h3>
+                <p class="feature-desc">
+                    No hidden fees. No premium tiers gatekeeping basic features. 
+                    Just links. Simple, right?
+                </p>
+                <span class="feature-tag">#KeepItReal</span>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3 class="feature-title">Lightning Fast</h3>
+                <p class="feature-desc">
+                    Our servers are faster than your ex's excuses. 
+                    Sub-second redirects, guaranteed.
+                </p>
+                <span class="feature-tag">#SpeedDemon</span>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3 class="feature-title">Kinda Secure</h3>
+                <p class="feature-desc">
+                    HTTPS everywhere. We're not saying we're hackers, 
+                    but we know how to lock things down.
+                </p>
+                <span class="feature-tag">#SecurityFirst</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="section-header">
+            <span class="section-badge">🚀 HOW IT WORKS</span>
+            <h2 class="section-title">EZ Mode Activated</h2>
+            <p class="section-subtitle">We're so easy a golden retriever could do it.</p>
+        </div>
+        
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">1️⃣</div>
+                <div class="step-content">
+                    <h3 class="step-title">Paste Your Long-Ass URL</h3>
+                    <p class="step-desc">
+                        You know the one. That 200-character monstrosity that looks like 
+                        someone dropped their keyboard. We don't judge.
+                    </p>
+                </div>
+                <div class="step-visual">
+                    <span class="step-icon">📎</span>
+                </div>
+            </div>
+            
+            <div class="step-connector">
+                <span>→</span>
+                <span class="connector-line"></span>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2️⃣</div>
+                <div class="step-content">
+                    <h3 class="step-title">Get Your Fire Short Link</h3>
+                    <p class="step-desc">
+                        Bam! We give you a tight little URL that's easy to share. 
+                        Or add your own custom slug if you're feeling creative.
+                    </p>
+                </div>
+                <div class="step-visual">
+                    <span class="step-icon">⚡</span>
+                </div>
+            </div>
+            
+            <div class="step-connector">
+                <span>→</span>
+                <span class="connector-line"></span>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">3️⃣</div>
+                <div class="step-content">
+                    <h3 class="step-title">???</h3>
+                    <p class="step-desc">
+                        Share it everywhere. Watch it spread. 
+                        Become the link wizard you were always meant to be.
+                    </p>
+                </div>
+                <div class="step-visual">
+                    <span class="step-icon">🧙</span>
+                </div>
+            </div>
+            
+            <div class="step-connector">
+                <span>→</span>
+                <span class="connector-line"></span>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">4️⃣</div>
+                <div class="step-content">
+                    <h3 class="step-title">🚀 PROFIT!</h3>
+                    <p class="step-desc">
+                        Okay not really profit but you get the gist. 
+                        Your links are short and the world is saved.
+                    </p>
+                </div>
+                <div class="step-visual">
+                    <span class="step-icon">💰</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ad Section -->
+    <section class="ad-section" id="pricing">
+        <div class="ad-content">
+            <div class="ad-badge">📺 SPONSORED</div>
+            <h2 class="ad-title">Watch This Ad.<br>Support Free Links. 🙏</h2>
+            <p class="ad-text">
+                We're showing you this so we can keep the lights on and the links shortening. 
+                It's a fair trade, right? RIGHT?
+            </p>
+            
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <span class="pricing-tier">Forever Free</span>
+                    <div class="pricing-price">
+                        <span class="price-amount">$0</span>
+                        <span class="price-period">/forever</span>
+                    </div>
+                </div>
+                <ul class="pricing-features">
+                    <li class="pricing-feature included">
+                        <span class="check-icon">✅</span>
+                        Unlimited link shortening
+                    </li>
+                    <li class="pricing-feature included">
+                        <span class="check-icon">✅</span>
+                        Custom slugs
+                    </li>
+                    <li class="pricing-feature included">
+                        <span class="check-icon">✅</span>
+                        Basic analytics
+                    </li>
+                    <li class="pricing-feature included">
+                        <span class="check-icon">✅</span>
+                        No ads on YOUR dashboard (loljk)
+                    </li>
+                    <li class="pricing-feature excluded">
+                        <span class="x-icon">👀</span>
+                        Actually there's an ad above this section
+                    </li>
+                </ul>
+                <button class="pricing-btn" disabled>You're Already Using It!</button>
+            </div>
+            
+            <div class="ad-placeholder">
+                <span class="ad-placeholder-icon">📺</span>
+                <span class="ad-placeholder-text">Premium Ad Space</span>
+                <span class="ad-placeholder-subtext">DM us to advertise here lol</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2 class="cta-title">Ready to Shorten Some Links? 🚀</h2>
+            <p class="cta-text">
+                Join the millions of people who decided their URLs needed a glow-up. 
+                Free forever. No catch. We promise.
+            </p>
+            <button class="cta-btn" onclick="document.getElementById('url-input').focus()">
+                <span class="cta-btn-icon">⚡</span>
+                Get Started Now
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="/" class="footer-logo">
+                    <span class="logo-icon">⚡</span>
+                    <span class="logo-text">FRII</span>
+                </a>
+                <p class="footer-tagline">
+                    Powered by M-Space but cooler. 🔥
+                </p>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <span>𝕏</span>
+                    </a>
+                    <a href="#" class="social-link" aria-label="GitHub">
+                        <span>⌨️</span>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Discord">
+                        <span>💬</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4 class="footer-heading">Links</h4>
+                    <a href="/" class="footer-link">Home</a>
+                    <a href="#features" class="footer-link">Features</a>
+                    <a href="#how-it-works" class="footer-link">How It Works</a>
+                    <a href="#pricing" class="footer-link">Pricing</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-heading">Legal</h4>
+                    <a href="#" class="footer-link">Terms of Service</a>
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Cookie Policy</a>
+                    <a href="#" class="footer-link">DMCA</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-heading">Contact</h4>
+                    <a href="mailto:hello@frii.site" class="footer-link">hello@frii.site</a>
+                    <a href="#" class="footer-link">Support</a>
+                    <a href="#" class="footer-link">Bug Reports</a>
+                    <a href="#" class="footer-link">Feature Requests</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p class="copyright">
+                © 2026 Frii. Made with 💔 and caffeine.
+            </p>
+            <p class="footer-credit">
+                A subsidiary of <a href="https://m-space.in" target="_blank" class="mspace-link">M-Space</a>, 
+                but don't tell anyone we said that.
+            </p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
